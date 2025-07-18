@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1c1d22f4;
+}
+
+h2 {
+    max-width: 60vw;
+    margin-left: 18%;
+    color: #efefefe0;
+    /* margin-left: 20vw; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    font-size: 2.4rem;
+}
+
+form {
+    display: flex;
+}
+
+form>input {
+    width: 100%;
+    height: 1.3rem;
+    max-width: 60vw;
+    margin-left: 18%;
+    margin-top: .25rem;
+    border-radius: 0.28rem 0rem 0rem 0.28rem;
+    display: inline-block;
+    background-color: #27282cec;
+    border: solid #415481eb;
+    cursor: pointer;
+    padding-left: 0.5rem;
+    color: #f5f5dc;
+}
+
+form>button {
+
+    margin-top: .25rem;
+    margin-right: 20vw;
+    margin-left: -0.2rem;
+    height: 1.5rem;
+    display: inline-block;
+    width: 7rem;
+    border-radius: 0.28rem;
+    border: none;
+    font-size: 13px;
+    background-color: #1856e7;
+    color: #ffffffc9;
+    cursor: pointer;
+}
+
+label>span {
+    display: inline-flex;
+    align-items: right;
+    align-items: center;
+    gap: 8px;
+}
+
+.completedTask {
+    color: #98c79c;
+    font-size: 1rem;
+}
+
+
+
+label {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    color: #efefefe0;
+    width: 100%;
+    margin-left: 18.5%;
+    max-width: 61.8vw;
+    margin-top: .8rem;
+    /* margin-right: 17.3vw; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+label:hover{
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+hr {
+    margin-left: 18.5%;
+    max-width: 61.8vw;
+    width: 100%;
+    border: none;
+    height: .1rem;
+    margin-top: .2rem;
+    background-color: #415481eb;
+
+}
+
+.item-container {
+    width: 100%;
+}
+
+.btn-trash {
+    fill: currentColor;
+    color: #99ff00e4;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-color: transparent;
+    border: none;
+    /* evita espaços extras */
+    
+}
+.icon-trash{
+    /* fill: currentColor; */
+    /* width: 285%;
+    height: 285%; */
+    width: 100%;
+    height: 100%;
+}

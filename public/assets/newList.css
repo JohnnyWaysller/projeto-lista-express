@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1c1d22f4;
+}
+
+label {
+
+    color: #efefefe0;
+    margin-left: 18%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    font-size: 2.2rem;
+
+}
+
+form {
+    margin-top: 2.5rem;
+}
+
+input {
+    display: inline-block;
+    height: 1.5rem;
+    width: 100%;
+    margin-left: 18%;
+    padding-left: 0.5rem;
+    background-color: #27282cec;
+    border: solid #415481eb;
+    border-radius: 0.28rem 0rem 0rem 0.28rem;
+    color: #f5f5dc;
+    cursor: pointer;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+button {
+    margin-left: -0.3rem;
+    margin-right: 18%;
+    height: 1.7rem;
+    display: inline-block;
+    width: 5rem;
+    border-radius: 0.28rem;
+    border: none;
+    font-size: .8rem;
+    background-color: #1856e7;
+    color: #ffffffc9;
+    cursor: pointer;
+}
+
+form>a {
+    display: inline-block;
+    padding-left: 0.2rem;
+    margin-left: 18%;
+    width: 0.8rem;
+    height: 1.28rem;
+    margin-top: 0.5rem;
+    border-radius: 0.28rem;
+    border: none;
+    font-size: 15px;
+    background-color: #91a6d8;
+    color: #ffffffc9;
+    cursor: pointer;
+    align-content: center;
+
+}

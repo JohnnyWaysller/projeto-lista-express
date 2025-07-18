@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/taskId.css">
+</head>
+
+<body>
+    <%- include('partials/header') %>
+
+        <br><br>
+
+        <h2>
+            <%=idTask.name.charAt(0).toUpperCase() + idTask.name.slice(1)%>
+        </h2>
+
+        <form action="/list" method="post">
+            <input type="text" id="addtask" name="content">
+            <input type="hidden" name="taskId" value="<%= idTask.id %>">
+            <button type="submit">adicionar</button>
+        </form>
+
+        <ul>
+            <%idTask.tasks.forEach( (task, index)=> { %>
+
+                <li class="item-container">
+                    <form action="/checkBoxTask" method="post">
+
+                        <label>
+                            <!-- coolocar comcluido/nao -->
+                            <%= task.content.charAt(0).toUpperCase() + task.content.slice(1)%>
+
+
+                                <span>
+                                    <p class="completedTask"
+                                        style="<%= task.status ? 'display:inline;' : 'display:none;' %>">Concluído</p>
+
+                                    <input type="hidden" name="fixedIndex" value='<%=index%>'>
+
+                                    <input type="checkbox" name="boxIndex" value='<%=index%>' onchange="form.submit()"
+                                        <%=task.status ? 'checked' : '' %>>
+
+                                    <button type="submit" formaction="/deleteTask" class="btn-trash">
+                                        <svg class="icon-trash" aria-hidden="true" focusable="false">
+                                            <use xlink:href="/icons.svg#trash-icon"></use>
+                                        </svg>
+                                    </button>
+                                </span>
+                        </label>
+                        <input type="hidden" name="taskId" value="<%= idTask.id %>"><br>
+                    </form>
+                </li>
+                <hr>
+
+                <% })%>
+        </ul>
+
+
+
+
+
+        <br><br>
+
+        <%- include('partials/footer') %>
+</body>
+
+</html>

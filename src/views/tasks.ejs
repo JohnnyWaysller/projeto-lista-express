@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas</title>
+    <link rel="stylesheet" href="/tasks.css">
+
+<body>
+    <%- include('partials/header') %>
+
+        <br><br>
+
+        <h2>Minhas listas</h2>
+
+        <% task.forEach(list=> { %>
+            <form action="/deleteList" method="post">
+                <div class="container">
+                    <% if (list.progress) { %>
+                     <p class="progress-border">
+                        <% }else if(!list.progress){ %>
+                            <p>
+                        <% } %>
+
+                        <a href="/list/<%=list.id%>">
+                            <%= list.name.charAt(0).toUpperCase() + list.name.slice(1)%>
+                        </a>
+                        
+                        <% if (list.progress) { %>
+                            <span class="progress">Tarefas finalizadas!</span>
+                        <% } %>
+
+                        <input type="hidden" name="listTodelete" value="<%=list.id%>">
+
+                        <button type="submit">Excluir</button>
+                    </p>
+                </div>
+            </form>
+            <%}); %>
+                <a href="/newList">Nova Lista de Tarefas</a>
+                <br><br>
+
+                <%- include('partials/footer') %>
+</body>
+
+</html>

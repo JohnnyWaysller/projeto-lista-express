@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+nav > ul{
+    padding-left: 1rem;
+    margin-left: 14%;
+    margin-top: 1rem;
+}
+ul, a{
+    padding-right: 1.45rem;
+}
+
+li{
+    display: inline;
+}
+header, a{
+    color: #ffffffc9;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.1rem;
+   
+}
+header, a:hover{
+    color: #ffffff;
+}

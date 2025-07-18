@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar nova lista</title>
+    <link rel="stylesheet" href="newList.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    
+    <form action="/createList" method="post">
+
+        <label for="list">Criar nova lista</label>
+
+        <div>
+            <input type="text" id="list" name="list" placeholder="digite a tarefa...">
+            <button type="submit">Criar</button>
+        </div>
+        <a href="/" class="btn-back">Voltar</a>
+    </form>
+
+
+
+    <br><br>
+
+    <%- include('partials/footer') %>
+</body>
+</body>
+</html>
